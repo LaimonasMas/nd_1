@@ -219,6 +219,155 @@ if ($zvakiuKaina > 2000) {
 
 <?php
 
+$random1 = rand(0, 100);
+echo $random1;
+echo '<br>';
+$random2 = rand(0, 100);
+echo $random2;
+echo '<br>';
+$random3 = rand(0, 100);
+echo $random3;
+echo '<br>';
+$averige = round((($random1 + $random2 + $random3) / 3));
+echo 'Trijų kintamųjų vidurkis yra: ' . $averige;
+echo '<br>';
+$sum = 0;
+$amountOfNumbers = 0; // tam, kad žinotume narių skaičių iš kurio dalinsime skaičiuojant vidurkį
+if ($random1 >=10 && $random1 <=90) {
+    $sum += $random1;
+    $amountOfNumbers++;
+}
+if ($random2 >=10 && $random2 <=90) {
+    $sum += $random2;
+    $amountOfNumbers++;
+}
+if ($random3 >=10 && $random3 <=90) {
+    $sum += $random3;
+    $amountOfNumbers++;
+}
+echo 'Narių suma: ' . $sum;
+echo '<br>';
+echo 'Narių skaičius: ' . $amountOfNumbers;
+echo '<br>';
+$averige2 = round($sum / $amountOfNumbers);
+echo 'Kintamųjų vidurkis atmetus reikšmes iki 10 ir virš 90 yra: ' . $averige2;
+?>
+
+<h2>ND nr.10</h2>
+
+<?php
+
+$hoursNotFormatted = rand(0, 23);
+echo "Valandos: $hoursNotFormatted";
+echo '<br>';
+$minutesNotFormatted = rand(0, 59);
+echo "Minutės: $minutesNotFormatted";
+echo '<br>';
+$secondsNotFormatted = rand(0, 59);
+echo "Sekundės: $secondsNotFormatted";
+echo '<br>';
+$hours = $hoursNotFormatted;
+$minutes = $minutesNotFormatted;
+$seconds = $secondsNotFormatted;
+if ($hoursNotFormatted < 10) {
+    $hours = sprintf("%02d", $hoursNotFormatted);
+}
+if ($minutesNotFormatted < 10) {
+    $minutes = sprintf("%02d", $minutesNotFormatted);
+}
+if ($secondsNotFormatted < 10) {
+    $seconds = sprintf("%02d", $secondsNotFormatted);
+}
+
+echo 'Pradinis laikas:';
+echo $hours . ':' . $minutes . ':' . $seconds;
+$extraRandomSeconds = rand(0, 300);
+echo '<br>';
+echo 'Pridedamas laikas: ' . $extraRandomSeconds . ' s.';
+// antro laikrodzio montavimas
+$hours2 = $hours;
+$minutes2 = $minutes;
+$seconds2 = $seconds;
+echo '<br>';
+
+if (($extraRandomSeconds + $seconds) < 60) {
+    $seconds2 = $extraRandomSeconds + $seconds;
+}
+if ((($extraRandomSeconds + $seconds) >= 60) && (($extraRandomSeconds + $seconds) < 120)) {
+    $minutes2++;
+    $seconds2 +=  $extraRandomSeconds - 60;
+    if ($minutes2 >= 60) {
+        $hours2++;
+        $minutes2 = $minutes2 - 60;
+        if ($hours2 > 23) {
+            $hours2 = 0;
+        }
+    }
+}
+if ((($extraRandomSeconds + $seconds) >= 120) && (($extraRandomSeconds + $seconds) < 180)) {
+    $minutes2 += 2;
+    $seconds2 +=  $extraRandomSeconds - 120;
+    if ($minutes2 >= 60) {
+        $hours2++;
+        $minutes2 = $minutes2 - 60;
+        if ($hours2 > 23) {
+            $hours2 = 0;
+        }
+    }
+}
+if ((($extraRandomSeconds + $seconds) >= 180) && (($extraRandomSeconds + $seconds) < 240)) {
+    $minutes2 += 3;
+    $seconds2 +=  $extraRandomSeconds - 180;
+    if ($minutes2 >= 60) {
+        $hours2++;
+        $minutes2 = $minutes2 - 60;
+        if ($hours2 > 23) {
+            $hours2 = 0;
+        }
+    }
+}
+if ((($extraRandomSeconds + $seconds) >= 240) && (($extraRandomSeconds + $seconds) < 300)) {
+    $minutes2 += 4;
+    $seconds2 +=  $extraRandomSeconds - 240;
+    if ($minutes2 >= 60) {
+        $hours2++;
+        $minutes2 = $minutes2 - 60;
+        if ($hours2 > 23) {
+            $hours2 = 0;
+        }
+    }
+}
+if ($extraRandomSeconds === 300) {
+    $minutes2 += 5;
+    if ($minutes2 >= 60) {
+        $hours2++;
+        $minutes2 = $minutes2 - 60;
+        if ($hours2 > 23) {
+            $hours2 = 0;
+        }
+    }
+}
+$hours2Formatted = $hours2;
+$minutes2Formatted = $minutes2;
+$seconds2Formatted = $seconds2;
+if ($hours2 < 10) {
+    $hours2Formatted = sprintf("%02d", $hours2);
+}
+if ($minutes2 < 10) {
+    $minutes2Formatted = sprintf("%02d", $minutes2);
+}
+if ($seconds2 < 10) {
+    $seconds2Formatted = sprintf("%02d", $seconds2);
+}
+
+
+
+echo 'Naujas laikas:';
+echo $hours2Formatted . ':' . $minutes2Formatted . ':' . $seconds2Formatted;
+
+
+
+
 
 
 
