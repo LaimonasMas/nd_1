@@ -364,18 +364,3 @@ if ($seconds2 < 10) {
 
 echo 'Naujas laikas:';
 echo $hours2Formatted . ':' . $minutes2Formatted . ':' . $seconds2Formatted;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
