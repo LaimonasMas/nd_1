@@ -153,6 +153,74 @@ echo "<h{$randomNumber}>{$randomNumber}</h{$randomNumber}>";
 
 <h2>ND nr.7</h2>
 
+<?php
+
+$randomFirst = rand(-10, 10);
+echo "Pirmo kintamojo reikšmė: $randomFirst";
+echo '<br>';
+$randomSecond = rand(-10, 10);
+echo "Pirmo kintamojo reikšmė: $randomSecond";
+echo '<br>';
+$randomThird = rand(-10, 10);
+echo "Pirmo kintamojo reikšmė: $randomThird";
+echo '<br>';
+if ($randomFirst < 0) {
+    echo "<h4 style='color:green;'>{$randomFirst}</h4>";
+}
+if ($randomSecond < 0) {
+    echo "<h4 style='color:green;'>{$randomSecond}</h4>";
+}
+if ($randomThird < 0) {
+    echo "<h4 style='color:green;'>{$randomThird}</h4>";
+}
+if ($randomFirst === 0) {
+    echo "<h4 style='color:red;'>{$randomFirst}</h4>";
+}
+if ($randomSecond === 0) {
+    echo "<h4 style='color:red;'>{$randomSecond}</h4>";
+}
+if ($randomThird === 0) {
+    echo "<h4 style='color:red;'>{$randomThird}</h4>";
+}
+if ($randomFirst > 0) {
+    echo "<h4 style='color:blue;'>{$randomFirst}</h4>";
+}
+if ($randomSecond > 0) {
+    echo "<h4 style='color:blue;'>{$randomSecond}</h4>";
+}
+if ($randomThird > 0) {
+    echo "<h4 style='color:blue;'>{$randomThird}</h4>";
+}
+?>
+
+<h2>ND nr.8</h2>
+
+<?php
+
+$zvakiuKiekis = rand(5, 3000);
+$zvakiuKaina = $zvakiuKiekis;
+$sumaSu3ProcNuolaida = $zvakiuKaina*0.97;
+$sumaSu4ProcNuolaida = $zvakiuKaina*0.96;
+$vienosZvakesKainaSu3ProcNuolaida = $sumaSu3ProcNuolaida / $zvakiuKiekis;
+$vienosZvakesKainaSu4ProcNuolaida = $sumaSu4ProcNuolaida / $zvakiuKiekis;
+
+if ($zvakiuKaina <= 1000) {
+    echo "Parduota $zvakiuKiekis žvakių už $zvakiuKaina Eur. Vienos žvakės kaina yra 1 Eur.";
+}
+if (($zvakiuKaina > 1000) && ($zvakiuKaina <= 2000)) {
+    echo 'Parduota ' . $zvakiuKiekis . ' žvakių už ' . $sumaSu3ProcNuolaida . " Eur. Vienos žvakės kaina {$vienosZvakesKainaSu3ProcNuolaida} Eur.";
+}
+if ($zvakiuKaina > 2000) {
+    echo 'Parduota ' . $zvakiuKiekis . ' žvakių už ' . $sumaSu4ProcNuolaida . " Eur. Vienos žvakės kaina {$vienosZvakesKainaSu4ProcNuolaida} Eur.";
+}
+?>
+
+<h2>ND nr.9</h2>
+
+<?php
+
+
+
 
 
 
