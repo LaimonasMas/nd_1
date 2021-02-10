@@ -31,7 +31,7 @@ echo '<br>';
 echo '<br>';
 if ($result === 'Dalyba iš 0 negalima!') {
     echo 'Dalyba iš 0 negalima!';
-} else if ($result !== 0) {    
+} else if ($result !== 0) {
     echo round($result, 2);
 }
 ?>
@@ -199,8 +199,8 @@ if ($randomThird > 0) {
 
 $zvakiuKiekis = rand(5, 3000);
 $zvakiuKaina = $zvakiuKiekis;
-$sumaSu3ProcNuolaida = $zvakiuKaina*0.97;
-$sumaSu4ProcNuolaida = $zvakiuKaina*0.96;
+$sumaSu3ProcNuolaida = $zvakiuKaina * 0.97;
+$sumaSu4ProcNuolaida = $zvakiuKaina * 0.96;
 $vienosZvakesKainaSu3ProcNuolaida = $sumaSu3ProcNuolaida / $zvakiuKiekis;
 $vienosZvakesKainaSu4ProcNuolaida = $sumaSu4ProcNuolaida / $zvakiuKiekis;
 
@@ -233,15 +233,15 @@ echo 'Trijų kintamųjų vidurkis yra: ' . $averige;
 echo '<br>';
 $sum = 0;
 $amountOfNumbers = 0; // tam, kad žinotume narių skaičių iš kurio dalinsime skaičiuojant vidurkį
-if ($random1 >=10 && $random1 <=90) {
+if ($random1 >= 10 && $random1 <= 90) {
     $sum += $random1;
     $amountOfNumbers++;
 }
-if ($random2 >=10 && $random2 <=90) {
+if ($random2 >= 10 && $random2 <= 90) {
     $sum += $random2;
     $amountOfNumbers++;
 }
-if ($random3 >=10 && $random3 <=90) {
+if ($random3 >= 10 && $random3 <= 90) {
     $sum += $random3;
     $amountOfNumbers++;
 }
@@ -364,3 +364,150 @@ if ($seconds2 < 10) {
 
 echo 'Naujas laikas:';
 echo $hours2Formatted . ':' . $minutes2Formatted . ':' . $seconds2Formatted;
+echo '<br>';
+?>
+
+<h2>ND nr.11</h2>
+
+<?php
+
+$random01 = rand(1000, 9999);
+$random02 = rand(1000, 9999);
+$random03 = rand(1000, 9999);
+$random04 = rand(1000, 9999);
+$random05 = rand(1000, 9999);
+$random06 = rand(1000, 9999);
+echo 'pirmas: ' . $random01 . ' antras: ' . $random02 . ' trecias: ' . $random03 . ' ketvirtas: ' . $random04 . ' penktas: ' . $random05 . ' sestas: ' . $random06;
+echo '<br>';
+
+$biggestNumber = 0;
+$a50 = 0;
+$a40 = 0;
+$a30 = 0;
+$a20 = 0;
+
+if ($random01 > $random02) {
+    $biggestNumber = $random01;
+} else {
+    $biggestNumber = $random02;
+}
+if ($random03 > $biggestNumber) {
+    $biggestNumber = $random03;
+}
+if ($random04 > $biggestNumber) {
+    $biggestNumber = $random04;
+}
+if ($random05 > $biggestNumber) {
+    $biggestNumber = $random05;
+}
+if ($random06 > $biggestNumber) {
+    $biggestNumber = $random06;
+}
+
+if ($random01 < $random02) {
+    $smallestNumber = $random01;
+} else {
+    $smallestNumber = $random02;
+}
+if ($random03 < $smallestNumber) {
+    $smallestNumber = $random03;
+}
+if ($random04 < $smallestNumber) {
+    $smallestNumber = $random04;
+}
+if ($random05 < $smallestNumber) {
+    $smallestNumber = $random05;
+}
+if ($random06 < $smallestNumber) {
+    $smallestNumber = $random06;
+}
+
+if ($random01 < $biggestNumber) {
+    $a50 = $random01;
+}
+if ($random02 < $biggestNumber && $random02 > $a50) {
+    $a50 = $random02;
+}
+if ($random03 < $biggestNumber && $random03 > $a50) {
+    $a50 = $random03;
+}
+if ($random04 < $biggestNumber && $random04 > $a50) {
+    $a50 = $random04;
+}
+if ($random05 < $biggestNumber && $random05 > $a50) {
+    $a50 = $random05;
+}
+if ($random06 < $biggestNumber && $random06 > $a50) {
+    $a50 = $random06;
+}
+
+if ($random01 < $a50) {
+    $a40 = $random01;
+}
+if ($random02 > $a40 && $random02 < $a50) {
+    $a40 = $random02;
+}
+if ($random03 > $a40 && $random03 < $a50) {
+    $a40 = $random03;
+}
+if ($random04 > $a40 && $random04 < $a50) {
+    $a40 = $random04;
+}
+if ($random05 > $a40 && $random05 < $a50) {
+    $a40 = $random05;
+}
+if ($random06 > $a40 && $random06 < $a50) {
+    $a40 = $random06;
+}
+
+if ($random01 > $smallestNumber) {
+    $a20 = $random01;
+}   
+if ($random02 > $smallestNumber && $random02 < $a20) {
+    $a20 = $random02;
+}
+if ($random03 > $smallestNumber && $random03 < $a20) {
+    $a20 = $random03;
+} 
+if ($random04 > $smallestNumber && $random04 < $a20) {
+    $a20 = $random04;
+}
+if ($random05 > $smallestNumber && $random05 < $a20) {
+    $a20 = $random05;
+}
+if ($random06 > $smallestNumber && $random06 < $a20) {
+    $a20 = $random06;
+}
+
+if ($random01 > $a20) {
+    $a30 = $random01;
+}   
+if ($random02 > $a20 && $random02 < $a30) {
+    $a30 = $random02;
+}
+if ($random03 > $a20 && $random03 < $a30) {
+    $a30 = $random03;
+} 
+if ($random04 > $a20 && $random04 < $a30) {
+    $a30 = $random04;
+}
+if ($random05 > $a20 && $random05 < $a30) {
+    $a30 = $random05;
+}
+if ($random06 > $a20 && $random06 < $a30) {
+    $a30 = $random06;
+}
+
+echo $biggestNumber;
+echo '<br>';
+echo $a50;
+echo '<br>';
+echo $a40;
+echo '<br>';
+echo $a30;
+echo '<br>';
+echo $a20;
+// echo '<br>';
+// echo $a10;
+echo '<br>';
+echo $smallestNumber;
