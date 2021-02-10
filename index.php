@@ -380,7 +380,6 @@ $random06 = rand(1000, 9999);
 echo 'pirmas: ' . $random01 . ' antras: ' . $random02 . ' trecias: ' . $random03 . ' ketvirtas: ' . $random04 . ' penktas: ' . $random05 . ' sestas: ' . $random06;
 echo '<br>';
 
-// $biggestNumber = 0;
 $a50 = 0;
 $a40 = 0;
 $a30 = 10000;
