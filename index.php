@@ -380,11 +380,11 @@ $random06 = rand(1000, 9999);
 echo 'pirmas: ' . $random01 . ' antras: ' . $random02 . ' trecias: ' . $random03 . ' ketvirtas: ' . $random04 . ' penktas: ' . $random05 . ' sestas: ' . $random06;
 echo '<br>';
 
-$biggestNumber = 0;
+// $biggestNumber = 0;
 $a50 = 0;
 $a40 = 0;
-$a30 = 0;
-$a20 = 0;
+$a30 = 10000;
+$a20 = 10000;
 
 if ($random01 > $random02) {
     $biggestNumber = $random01;
@@ -498,16 +498,5 @@ if ($random06 > $a20 && $random06 < $a30) {
     $a30 = $random06;
 }
 
-echo $biggestNumber;
+echo 'pirmas: ' . $biggestNumber . ' antras: ' . $a50 . ' trecias: ' . $a40 . ' ketvirtas: ' . $a30 . ' penktas: ' . $a20 . ' sestas: ' . $smallestNumber;
 echo '<br>';
-echo $a50;
-echo '<br>';
-echo $a40;
-echo '<br>';
-echo $a30;
-echo '<br>';
-echo $a20;
-// echo '<br>';
-// echo $a10;
-echo '<br>';
-echo $smallestNumber;
