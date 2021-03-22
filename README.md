@@ -1,4 +1,4 @@
-## Homework task
+## Homework tasks
 
 Variables and conditional statements
 
